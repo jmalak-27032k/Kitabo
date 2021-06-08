@@ -1,0 +1,35 @@
+
+<div class="row">
+    <div class="col-md-4"></div>
+
+    <div class="col-md-4">
+        <h2 style="text-align: center;">Select Categories</h2>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="card mx-auto">
+            <div class="row mt-4">
+                <div *ngFor="let genre of subSubGenre,let i=index" class="col-md-4 mt-2">
+                    <button id="b{{i}}" (click)="takeGenre(genre,i)" class="btn1">{{genre}}</button>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <button (click)="onSubmit()" class="btn">Continue</button>
+                </div>
+                <div class="col-md-1"></div>
+
+            </div>
+            <br><br>
+        </div>
+    </div>
+
+    <div class="col-md-3"></div>
+
+</div>

@@ -1,0 +1,88 @@
+::ng-deep h6,h5, h4, h3,h2,h1,label,.nav, input,button,p{
+    font-family: "Rubik", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+.card1{
+    box-shadow: 0 15px 25px rgba(0,0,0,0.19), 0 11px 11px rgba(0,0,0,0.23);
+    height: 350px;
+    border-bottom-right-radius: 50px;
+    padding: 0;
+    width: 100%;
+}
+.card-body{
+    padding: 0;
+}
+.card2{
+    box-shadow: 0 15px 25px rgba(0,0,0,0.19), 0 11px 11px rgba(0,0,0,0.23);
+    // height: 280px;
+    // width: 204px;
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+}
+.carousel{
+    height: 300px;
+    border-bottom-right-radius: 50px;
+}
+.imgbox{
+    // height: 270px;
+    // width: 190px;
+    height: 248px;
+    width: 177px;
+    padding: 1px;
+    border-radius: 10px;
+    border: none;
+    //box-shadow: 0 15px 25px rgba(0,0,0,0.19), 0 11px 11px rgba(0,0,0,0.23);
+    &.bottom {
+        box-shadow: 0px 15px 10px -15px #111;    
+      }
+
+}
+.btn1{
+    margin-top: -11px;
+    border-radius: 10px;
+    border: none;
+    margin-left: 1350px;
+}
+.buttonTab{
+    border: none;
+    font-size: 17px;
+   background:none;
+   height: 50px;
+   width: 150px;
+   color: #ACBEC9;
+   font-weight: 500;
+}
+.buttonTab:hover{
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+}
+.buttonTab:focus{
+    font-weight: 600;
+   color: black;
+    font-size: 18px;
+    border-bottom: solid;
+    
+}
+// .buttonTab1:nth-child(1):focus{
+//     font-weight: 600;
+//     font-size: 20px;
+//     border-bottom: solid;
+// }
+.showMore{
+    display: none;
+}
+.firstButton{
+    font-weight: 600;
+    font-size: 20px;
+    border-bottom: solid;
+}
+.imgbox1{
+   height: 100px;
+   border-bottom-right-radius: 50px;
+   padding: 0;
+   width: 100%;
+}
+
+    
+ 

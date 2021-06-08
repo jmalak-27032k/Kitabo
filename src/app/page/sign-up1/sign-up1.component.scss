@@ -1,0 +1,86 @@
+::ng-deep h6,h5, h4, h3,h2,h1,label,.nav, input,button,p{
+    font-family: "Rubik", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+.card{
+   
+    height: 600px;
+    width: 450px;
+    text-align: center;
+    border-radius: 10px;
+}
+.card:hover{
+    height: 605px;
+    width: 455px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.imgbox{
+    height: 200px;
+    width: 285px;
+    padding: 0px;
+    margin-left: -23px;
+}
+.btnG{
+    border-radius: 36px;
+    background: none;
+    border: none;
+    background-color: black;
+    color: white;
+    width: 35px;
+    height: 35px;
+}
+.btnF{
+    border-radius: 36px;
+    background: none;
+    border: none;
+    background-color: black;
+    color: white;
+    width: 35px;
+    height: 35px;
+}
+.btnT{
+    border-radius: 36px;
+    background: none;
+    border: none;
+    background-color: black;
+    color: white;
+    width: 35px;
+    height: 35px;
+}
+.mobNum {
+    position: absolute;
+    display: block;
+    transform: translate(0, -50%);
+    top: 50%;
+    pointer-events: none;
+    width: 35px;
+    text-align: center;
+    font-style: normal;
+    left: 0;
+  }
+  .btn1{
+    background-color:white;
+    height: 45px;
+    color: #363535;
+    padding: 0px;
+    width: 350px;
+    font-weight: 700;
+    border-radius: 12px;
+}
+.btn1:hover {
+    background-color: #363535;
+    height: 47px;
+    color: white;
+    padding: 0px;
+    width: 352px;
+    font-weight: 700;
+    border-radius: 12px;
+    
+}
+input:active{
+    border-color: black;
+}
+input:focus{
+    border-color: black;
+}

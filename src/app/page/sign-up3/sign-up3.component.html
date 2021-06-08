@@ -1,0 +1,47 @@
+<body style="background-image: url(assets/images/Capture16.png);background-size: cover;margin-left: -30px;
+margin-right: -30px;">
+<br><br><br>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div class="card mt-5 mx-auto"
+                style="background-image: url(assets/images/Capture19.PNG);background-size: cover;">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <h4 style="padding-left: 25px;"><b>Tell us about yourself</b></h4>
+                </div>
+                <div class="col-md-2"></div>
+            </div><br>
+
+            <form [formGroup]="formGroup">
+            <div class="form-group row" style="padding: 1%;">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <input type="text" formControlName="FirstName" placeholder="First Name"
+                        class="form-control txt"/><br>
+                    <input type="text" formControlName="LastName" placeholder="Last Name" class="form-control txt"/>
+                    <br><br>
+                    <h5><b>Birthday</b></h5>
+                    <input type="date" formControlName="DOB" placeholder="Last Name" class="form-control txt"/>
+
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+            <br><br><br>
+            <br><br><br>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <button (click)="onSubmit(formGroup.value)" class="btn1">Continue</button><br><br>
+                </div>
+                <div class="col-md-1"></div>
+
+            </div>
+        </form>
+        </div>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+</body>

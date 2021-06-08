@@ -1,0 +1,60 @@
+<body style="background-image: url(assets/images/Capture16.png);background-size: cover;margin-left: -30px;
+margin-right: -30px;">
+    <br><br><br>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="card mt-5 mx-auto"
+                style="background-image: url(assets/images/Capture19.PNG);background-size: cover;">
+                
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <img src="assets\images\Capture9.PNG" class="imgbox">
+                    </div>
+                    <div class="col-md-2"></div>
+                </div><br>
+
+
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <h5 style="padding-left: 25px;"><b>Mobile Verification</b></h5>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+
+                <div class="row" style="height: 80px;">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6" style="padding-left: 15px;">
+                        <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="{length:4,allowNumbersOnly:true}"></ng-otp-input>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <p><b><span style="color: gray;">OTP has been sent to</span>
+                                <span *ngFor="let item of info1">+91-{{item.sm}}</span></b></p>
+                        <p style="color: gray;"><b><span>Didn't recieved the OTP?</span> 
+                            <button style="color: red;background: none;border: none;"><b> Resend </b></button></b></p>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div><br>
+
+
+
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <button (click)="goTo()" class="btn1">Continue</button><br><br>
+                    </div>
+                    <div class="col-md-1"></div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</body>

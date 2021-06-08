@@ -1,0 +1,78 @@
+::ng-deep h6,h5, h4, h3,h2,h1,label,.nav, input,button,p{
+    font-family: "Rubik", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    .imgbox1{
+        height: 280px;
+        width: 204px;
+        padding: 1px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 15px 25px rgba(0,0,0,0.19), 0 11px 11px rgba(0,0,0,0.23);
+    
+    }
+    .btnGenre{
+        border-radius: 7px;
+        background: none;
+        color: rgb(66, 66, 66);
+        border-color: rgb(66, 66, 66);
+    }
+    table{
+        background-color: #EAF4FC;
+    /* width: 154px; */
+    border-radius: 16px;
+    text-align: center;
+    }
+    td{
+        width: 130px;
+    }
+    // .btn1{
+    //     background-color:white;
+    //     height: 55px;
+    //     color: #363535;
+    //     padding: 0px;
+    //     width: 177px;
+    //     font-weight: 700;
+    //     margin-left: 3px;
+    //     border-radius: 17px;
+    //     margin-left: 21px;
+    // }
+    // .btn1:hover {
+    //     background-color: #363535;
+    //     height: 55px;
+    //     color: white;
+    //     padding: 0px;
+    //     width: 177px;
+    //     font-weight: 700;
+    //     margin-left: 3px;
+    //     border-radius: 17px;
+    //     margin-left: 21px;
+        
+    // }
+    .btn1{
+        background-color: #363535;
+        height: 50px;
+        color: white;
+        padding: 0px;
+        width: 300px;
+        font-weight: 700;
+        border-radius: 15px;
+    }
+    .imgbox{
+        // height: 164px;
+        // width: 107px;
+        height: 224px;
+        width: 160px;
+        padding: 1px;
+        border-radius: 10px;
+    }
+    .text{
+        font-size: 15px;
+        font-weight: 500;
+}
+// .same{
+//     display: none;
+// }
+// .different{
+//     display: none;
+// }
+    

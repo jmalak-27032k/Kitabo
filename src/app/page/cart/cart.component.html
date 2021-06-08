@@ -1,0 +1,125 @@
+<!-- when the cart is not empty -->
+<div *ngIf="filled; else elseBlock">
+  <br>
+  <h2>My Cart</h2>
+  <br>
+  <div class="row">
+
+    <div class="col-md-8">
+      <div class="row" style="height: 320px;" *ngFor="let item of books1">
+        <div class="col-md-3">
+          <div class="card imgbox1 mt-0">
+            <img src="{{item.CoverImg}}" class="imgbox1">
+          </div>
+        </div>
+
+        <div class="col-md-9 pl-4">
+          <h4>{{item.Title}}</h4>
+          <p>{{item.Genre}}</p>
+          <p>₹ {{item.SellingPrice}}</p>
+          <button class="btnGenre">Rent</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card c1" *ngFor="let item of amount">
+        <table>
+          <tr>
+            <td>Security Amount</td>
+            <td>₹ {{item.securityAmt}}</td>
+          </tr>
+          <tr>
+            <td>Rent Amount ({{item.arraLength}} book)</td>
+            <td>₹ {{item.rent}}</td>
+          </tr>
+          <tr>
+            <td>Delivery Fee</td>
+            <td>₹ {{item.deliveryFee}}</td>
+          </tr>
+          <tr style="border-top: solid;">
+            <td>To Pay</td>
+            <td>₹ {{item.subTotal}}</td>
+          </tr>
+        </table>
+        <br>
+        <button (click)="open(content)" class="btn">Checkout &nbsp;&nbsp;&nbsp; ₹ {{item.subTotal}}</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- pop-up starts from here -->
+  <ng-template #content let-modal let-c="close" data-backdrop="static" let-d="dismiss" class="m1">
+    <div id="modalPopUp" class="modal-body mx-5 my-5">
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+
+      <h4 class="center">For these selected books</h4>
+      <p>If you would like to rent these books you need to select a time to return the books</p>
+      <br>
+
+      <h5><b>Select Time</b></h5>
+      <br>
+      <div class="col-md-12" (change)="setvalue($event)" *ngFor="let item of amount">
+
+        <div><input type="radio" id="oneWeek" value="1" name="Role">
+          &nbsp;
+          <label for="oneWeek"><b>One week <span style="color: #ACBEC9;">₹{{item.rent}}</span></b></label>
+        </div>
+        &nbsp;
+        <div><input type="radio" id="twoWeek" value="2" name="Role">
+          &nbsp;
+          <label for="twoWeek"><b>Two week <span style="color: #ACBEC9;">₹{{2*item.rent}}</span></b></label>
+        </div>
+        &nbsp;
+        <div><input type="radio" id="threeWeek" value="3" name="Role">
+          &nbsp;
+          <label for="threeWeek"><b>Three week<span style="color: #ACBEC9;"> ₹{{3*item.rent}}</span></b></label>
+        </div>
+        &nbsp;
+
+      </div>
+      <br>
+
+      <button data-backdrop="false" class="modal-backdrop" type="button" class="btn btn-secondary" (click)="continue()"
+        (click)="modal.dismiss('Cross click')">Continue</button>
+
+    </div>
+  </ng-template>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<!-- when the cart is empty -->
+<ng-template #elseBlock>
+  <br><br>
+  <h2>My Cart</h2>
+  <br><br><br>
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <img src="assets\images\empty-cart.png" class="imgbox">
+      <h2 class="center">Nothing to See Here!</h2>
+      <br>
+      <p class="center1">You have no items in the cart</p>
+      <p class="center1">Let's change that!</p>
+      <br>
+      <button (click)="HomePage()" class="btn">Add Item</button>
+
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</ng-template>

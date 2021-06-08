@@ -1,0 +1,79 @@
+::ng-deep h6,h5, h4, h3,h2,h1,label,.nav, input,button,p,label,span,table,tr,th,td{
+    font-family: "Rubik", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+.imgbox{
+    height: 145px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+.center1{
+    display: flex;
+    justify-content: center;
+    color: grey;
+    font-size: 17px;
+}
+.btn{
+    background-color: #363535;
+    height: 55px;
+    color: white;
+    padding: 0px;
+    width: 250px;
+    font-weight: 700;
+    margin-left: 3px;
+    border-radius: 15px;
+
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.imgbox1{
+    height: 280px;
+    width: 204px;
+    padding: 1px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.19), 0 11px 11px rgba(0,0,0,0.23);
+
+}
+.btnGenre{
+    border-radius: 7px;
+    background: none;
+    color: rgb(66, 66, 66);
+    border-color: rgb(66, 66, 66);
+}
+.c1{
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+tr{
+    box-shadow: 0 3px 3px rgba(190, 186, 186, 0.19), 0 3px 5px rgba(187, 182, 182, 0.23);
+    height: 45px;
+    border-radius: 5px;
+}
+.btn{
+    background-color: #363535;
+    height: 50px;
+    width: 350px;
+    color: white;
+    font-weight: 700;
+    border-radius: 15px;
+}
+.m1{
+    margin-top: 278px;
+}
+// .modal-backdrop {
+//     background-color: transparent;
+//     }
+    .modal-backdrop {
+        display: none !important;
+        }
+        .modal-open .modal {
+        width: 300px;
+        margin: 0 auto;
+        }

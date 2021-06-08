@@ -1,0 +1,39 @@
+<br>
+<h2>Edit Profile</h2>
+<br>
+<div class="row">
+    <div class="col-md-7">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-9">
+                <img style="height: 150px;" src="assets\images\Profile Icon.png" /><br>
+                <button class="changePhoto mt-0">Change Photo</button>
+                <br><br><br>
+            </div>
+            <br><br>
+        </div>
+        <div class="row">
+            <div class="col-md-8 ml-5">
+                <form form [formGroup]="formGroup">
+
+                    <input type="text" formControlName="FirstName" placeholder="First Name" class="form-control" required />
+                    <br>
+
+                    <input type="text" formControlName="LastName" placeholder="Last Name" class="form-control" required />
+                    <br>
+
+                    <input type="text" formControlName="Mobile" placeholder="Mobile" class="form-control" readonly />
+                    <br>
+
+                    <input type="text" formControlName="DOB" placeholder="DOB" class="form-control" required />
+                    <br>
+                    <button (click)="update(formGroup.value)" class="update ml-5">Update</button>
+                </form>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+
+    </div>
+    <div class="col-md-5"></div>
+
+</div>

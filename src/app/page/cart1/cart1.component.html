@@ -1,0 +1,318 @@
+<!-- when user hasent logged in -->
+<div *ngIf="filled; else elseBlock">
+
+  <div class="row">
+    <div class="col-md-8">
+      <section id="vertical-timeline-left"
+        class="ml-0 mt-5 timeline-left timeline-wrapper col-sm-10 col-12 offset-sm-1">
+
+        <ul class="timeline">
+          <li class="timeline-line"></li>
+          <li class="timeline-item">
+            <div class="timeline-badge">
+              <span class="Active" data-toggle="tooltip" placement="right" ngbTooltip="Login/SignUp">
+                <i class="fa fa-user-o" aria-hidden="true"></i>
+              </span>
+            </div>
+            <div class="timeline-card card shadow-z-1">
+
+              <div class="card-content">
+                <div class="card-body">
+                  <h3>Sign in to place your order</h3>
+                  <p style="color: grey;">New to kitabo?Sign up now to get started Or log in to<br> your existing
+                    account</p>
+                  <button (click)="goToLogin()" class="logInBotton">Log in</button>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-badge">
+              <span class="Inactive" data-toggle="tooltip" placement="right" ngbTooltip="Choose address">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+              </span>
+            </div>
+            <div class="timeline-card card shadow-z-1">
+
+              <div class="card-content">
+                <div class="card-body">
+                  <h3 style="color: rgb(177, 174, 174);">Choose Address</h3>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-badge">
+              <span class="Inactive" data-toggle="tooltip" placement="right" ngbTooltip="Select Payment Method">
+                <i class="fa fa-credit-card" aria-hidden="true"></i>
+              </span>
+            </div>
+            <div class="timeline-card card shadow-z-1">
+
+              <div class="card-content">
+                <div class="card-body">
+                  <h3 style="color: rgb(177, 174, 174);">Select payment Method</h3>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+      </section>
+    </div>
+    <div class="col-md-4">
+      <div class="mt-5 card c1" *ngFor="let item of amount">
+        <table>
+          <tr class="tableRow">
+            <td><img src="assets\images\Capture24.png" style="height: 25px;"> Apply coupon Code</td>
+            <td><button class="apply">Apply</button></td>
+          </tr>
+          <tr>
+            <td>Subtotal</td>
+            <td>₹ {{item.Subtotal}}</td>
+          </tr>
+
+          <tr style="border-top: solid;">
+            <td>To Pay</td>
+            <td>₹ {{item.Subtotal}}</td>
+          </tr>
+        </table>
+        <br>
+        <button (click)="open(content)" class="btn">Checkout &nbsp;&nbsp;&nbsp; ₹ {{item.Subtotal}}</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- user is logged in -->
+<ng-template #elseBlock>
+
+  <div class="row">
+    <div class="col-md-8">
+      <section id="vertical-timeline-left"
+        class="ml-0 mt-5 timeline-left timeline-wrapper col-sm-11 col-12 offset-sm-1">
+
+        <ul class="timeline">
+          <li class="timeline-line"></li>
+          <li class="timeline-item">
+            <div class="timeline-badge">
+              <span class="Active" data-toggle="tooltip" placement="right" ngbTooltip="Login/SignUp">
+                <i class="fa fa-user-o" aria-hidden="true"></i>
+              </span>
+            </div>
+            <div class="timeline-card card shadow-z-1">
+
+              <div class="card-content">
+                <div class="card-body">
+
+                  <h3>Cart</h3>
+                  <br>
+                  <!-- <table>
+                              <tr *ngFor="let item1 of books1">
+                                <td class="title">{{item1.Title}}</td>
+                                <td class="data">{{item1.Genre}}</td>
+                                <td class="data">{{item1.SellingPrice}}</td>
+                              </tr>
+                            </table> -->
+                  <div class="divBorders">
+                    <div class="row" *ngFor="let item1 of books1">
+                      <div class="col-md-6 data">{{item1.Title}}</div>
+                      <div class="col-md-4 data">{{item1.Genre}}</div>
+                      <div class="col-md-2 data">{{item1.SellingPrice}}</div>
+                      <br><br>
+                    </div>
+
+                  </div>
+                  <br>
+                  <div class="divBorders">
+                    <!-- <input type="checkbox" id="checkbox1" checked> &nbsp; -->
+                    <!-- <label for="checkbox1"><span>Active</span></label> -->
+                    <div class="row">
+                      <div class="col-md-1"><input id="checkbox1" type="checkbox" id="checkbox1"
+                          (change)="deliveryType($event)"></div>
+                      <div class="col-md-11 mr-0">
+                        <h5>Self Pickup</h5>
+                      </div>
+                    </div>
+                    <p>You have to go to the bookstore and pickup your order</p>
+                  </div>
+                  <br>
+
+                  <div class="d1" id="d1">
+                    <div class="divBorders">
+                      <h6><i class="fa fa-pencil-square-o" style="font-size: 25px;" aria-hidden="true"></i> &nbsp;
+                        Add Delivery Instructions:
+                      </h6>
+                      <form [formGroup]="formGroup">
+                        <textarea style="width: 600px;" formControlName="DeliveryInstructions" rows="4" cols="30"></textarea><br>
+                        <button class="add" (click)="addInstruction(formGroup.value)">Add</button>
+                        <button class="add" (click)="cancel()">Cancel</button>
+                      </form>
+                    </div>
+                  </div>
+
+                  
+                  <div class="d2" id="d2">
+                    <button (click)="instructions()" class="divBorders1" *ngFor="let item of DI2">
+                      <h6><i class="fa fa-pencil-square-o" style="font-size: 25px;" aria-hidden="true"></i> &nbsp;
+                        Delivery Instructions :
+                      </h6>
+                      <p>{{item}}</p>
+                    </button>
+                  </div>
+               
+
+                  <div class="d3" id="d3">
+                    <div class="divBorders" *ngFor="let item of DI1">
+                      <h6><i class="fa fa-pencil-square-o" style="font-size: 25px;" aria-hidden="true"></i> &nbsp;
+                        Delivery Instructions :
+                      </h6>
+                      <p>{{item}}</p>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="divBorders">
+                    <!-- <input type="checkbox" id="checkbox1" checked> &nbsp; -->
+                    <!-- <label for="checkbox1"><span>Active</span></label> -->
+                    <div class="row">
+                      <div class="col-md-1"><input [disabled]="isDisabled" id="checkbox1" type="checkbox" id="checkbox1"
+                          checked></div>
+                      <div class="col-md-11 mr-0">
+                        <h5>No contact delivery</h5>
+                      </div>
+                    </div>
+                    <p>Partner will check with you and leave the order outside the door</p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-badge">
+              <span class="Active" data-toggle="tooltip" placement="right" ngbTooltip="Choose address">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+              </span>
+            </div>
+            <div class="timeline-card card shadow-z-1">
+
+              <div class="card-content">
+                <div class="card-body">
+                  <h3>Choose Address</h3>
+                  <button (click)="open(content)" class="addAddress">Add Address</button>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-badge">
+              <span class="Inactive" data-toggle="tooltip" placement="right" ngbTooltip="Select Payment Method">
+                <i class="fa fa-credit-card" aria-hidden="true"></i>
+              </span>
+            </div>
+            <div class="timeline-card card shadow-z-1">
+
+              <div class="card-content">
+                <div class="card-body">
+                  <h3 style="color: rgb(177, 174, 174);">Select payment Method</h3>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+      </section>
+    </div>
+    <!-- <div class="col-md-4">
+      <div class="mt-5 card c1" *ngFor="let item of amount">
+        <table>
+          <tr>
+            <td>Apply coupon Code</td>
+            <td><button class="apply">Apply</button></td>
+          </tr>
+          <tr>
+            <td>Subtotal</td>
+            <td>₹ {{item.Subtotal}}</td>
+          </tr>
+
+          <tr>
+            <td>To Pay</td>
+            <td>₹ {{item.Subtotal}}</td>
+          </tr>
+        </table>
+        <br>
+        <button class="btn">Checkout &nbsp;&nbsp;&nbsp; ₹ {{item.Subtotal}}</button>
+      </div>
+    </div> -->
+
+    <div class="col-md-4">
+      <div class="mt-5 card c1" *ngFor="let item of amount">
+        <table>
+          <tr>
+            <td><img src="assets\images\Capture24.png" style="height: 25px;"> Apply coupon Code</td>
+            <td><button class="apply">Apply</button></td>
+          </tr>
+          <tr>
+            <td>Security Amount</td>
+            <td>₹ {{item.SecurityAmount}}</td>
+          </tr>
+          <tr>
+            <td>Rent Amount ({{item.arraLength}} book)</td>
+            <td>₹ {{item.FinalRent}}</td>
+          </tr>
+          <tr>
+            <td>Delivery Fee</td>
+            <td>₹ {{item.deliveryFee}}</td>
+          </tr>
+          <tr style="border-top: solid;">
+            <td>To Pay</td>
+            <td>₹ {{item.Subtotal}}</td>
+          </tr>
+        </table>
+        <br>
+        <button (click)="proceed()" class="btn">Checkout &nbsp;&nbsp;&nbsp; ₹ {{item.Subtotal}}</button>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- pop-up 1 starts from here -->
+  <ng-template #content let-c="close" data-backdrop="static" let-d="dismiss" class="m1">
+    <div id="modalPopUp" class="modal-body mx-4 my-4">
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <h4 class="center">Change Delivery Address</h4>
+      <br>
+      <div class="col-md-12" (change)="setvalue($event)" (change)="d('Cross click')">
+
+        <div *ngFor="let item of add;let i=index">
+          <div><input type="radio" id="" value="{{i}}" name=" ">
+            &nbsp;
+            <label for="oneWeek"><b>{{item.AddType}}</b></label><br> <button (click)="editAddress(item.HouseNo)" (click)="d('Cross click')"
+              class="edit">Edit</button>
+            <p>
+              {{item.HouseNo}}&nbsp;{{item.SubLocality}}&nbsp;{{item.City}}&nbsp;{{item.State}}&nbsp;{{item.Pincode}},&nbsp;India
+            </p><br>
+            <!-- <b>{{item.landmark}}</b> -->
+          </div>
+          <br><br>
+        </div>
+
+      </div>
+      <br>
+
+      <button (click)="addNewAddress()" (click)="d('Cross click')" data-backdrop="false" class="modal-backdrop"
+        type="button" class="btn btn-secondary">Add new Adress</button>
+      <!-- <button (click)="proceed()" type="button" class="btn btn-secondary">Proceed</button> -->
+
+    </div>
+
+  </ng-template>
+</ng-template>

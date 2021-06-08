@@ -1,0 +1,38 @@
+::ng-deep h6,h5, h4, h3,h2,h1,label,.nav, input,button,p{
+    font-family: "Rubik", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+.container{
+    padding: 80px;
+}
+input{
+    background-color: #EAF4FC;
+    border: none;
+}
+.card{
+    border-radius: 30px;
+}
+.btn{
+    margin-right: 7px;
+    //background-color: #30303C;
+    //color: white;
+    border-color: #30303C;
+}
+.btn:hover{
+    margin-right: 7px;
+    background-color: #30303C;
+    color: white;
+    border-color: #30303C;
+}
+.btn:focus{
+    margin-right: 7px;
+    background-color: #30303C;
+    color: white;
+    border-color: #30303C;
+}
+.btn1{
+    height: 53px;
+    width: 302px;
+    background-color: #30303C;
+    color: white;
+    border-radius: 10px;
+}

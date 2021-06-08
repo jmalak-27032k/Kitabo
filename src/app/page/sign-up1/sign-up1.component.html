@@ -1,0 +1,70 @@
+<body style="background-image: url(assets/images/Capture16.png);background-size: cover;margin-left: -30px;
+margin-right: -30px;">
+    <br><br>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="card mt-5 mx-auto p-0"
+                style="background-image: url(assets/images/Capture19.PNG);background-size: cover;">
+                <br><br>
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <img src="assets\images\Capture17.png" class="imgbox">
+                    </div>
+                    <div class="col-md-2"></div>
+                </div><br>
+
+                <div class="row">
+                    <div class="col-md-3"></div>
+
+                    <div class="col-md-2"><button class="btnG"><i class="fa fa-google-plus"
+                                aria-hidden="true"></i></button></div>
+                    <div class="col-md-2"><button class="btnF"><i class="fa fa-facebook"
+                                aria-hidden="true"></i></button></div>
+                    <div class="col-md-2"><button class="btnT"><i class="fa fa-twitter" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+                <br>
+                <div class="row" style="text-align: center;">
+                    <div class="col-md-5"></div>
+                    <div style="padding-left: 25px;" class="col-md-2">
+                        <h5 style="text-align: center;"><b>or</b></h5>
+                    </div>
+                    <div class="col-md-5"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <h5 style="padding-left: 25px;"><b>Login or Sign Up</b></h5>
+                    </div>
+                    <div class="col-md-2"></div>
+
+                </div>
+                <form [formGroup]="formGroup">
+                    <div class="form-group row" style="padding: 1%;">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <i class="mobNum"><b>+91 - </b></i> <input style="margin-left: 25px;" type="number"
+                                formControlName="mobileNumber" placeholder="Mobile Number" class="form-control" />
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <button (click)="onSubmit(formGroup.value)" class="btn1">Continue</button><br><br>
+                            <button (click)="goTo()" class="btn1">Continue as guest</button>
+                        </div>
+                        <div class="col-md-1"></div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</body>

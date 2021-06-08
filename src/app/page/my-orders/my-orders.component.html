@@ -1,0 +1,36 @@
+<br>
+<h2>My Order</h2>
+<br>
+<div *ngFor="let item of orderDetails">
+  <div class="row">
+    <div class="col-md-5">
+      <h4 style="font-weight: 500;">Order ID : {{item.OrderId}}</h4>
+      <p><b style="font-weight: 500;">Total Item : </b><span style="color: #ACBEC9;">{{item.Items.length}}</span> <br>
+        <b style="font-weight: 500;">Total Amount : </b><span style="color: #ACBEC9;">{{item.TotalAmount}}</span>
+      </p>
+    </div>
+    <div class="col-md-4">
+      <p><span style="color: rgb(65, 180, 146);"><b>{{item.Status}}</b></span><br>
+        <b><span style="color: #ACBEC9;">{{item.Created.toDate() | date:'yyyy/MM/dd h:mm:ss a'}}</span></b>
+      </p>
+    </div>
+    <div class="col-md-3">
+      <button class="b1">Track Order</button>&nbsp;&nbsp; <button class="b1">Cancel Order</button>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-2" *ngFor="let data of item.Items">
+      <!-- {{data.ISBN}} -->
+      <div>
+      
+            <img src="{{data.CoverImg}}" class="imgbox center1" placement="top" ngbTooltip="{{data.Title}}">
+        
+    </div><br>
+    <h4 class="center"><b style="font-weight: 500;">{{data.Title}}</b> </h4>
+    <p  class="center"><b style="font-weight: 500;">Book Price :</b><span style="color: #ACBEC9;">₹ {{data.SellingPrice}}</span></p>
+    </div>
+    
+  </div>
+  <br> <br>
+</div>

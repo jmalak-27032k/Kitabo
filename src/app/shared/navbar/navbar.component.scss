@@ -1,0 +1,68 @@
+::ng-deep h6,h5, h4, h3,h2,h1,label,.nav, input,button,p,span{
+  font-family: "Rubik", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.btn{
+    background-color:white;
+    height: 40px;
+    color: #363535;
+    padding: 0px;
+    width: 77px;
+    font-weight: 700;
+    margin-left: 3px;
+}
+.btn:hover {
+    background-color: #363535;
+    height: 40px;
+    color: white;
+    padding: 0px;
+    width: 77px;
+    font-weight: 700;
+    margin-left: 3px;
+  }
+
+  .btn1{
+   // background-color:white;
+    height: 35px;
+    //color: #363535;
+    padding: 0px;
+    width: 65px;
+    //font-weight: 700;
+    margin-left: 3px;
+    border: none;
+    border-radius: 8px;
+}
+.btn1:hover {
+   // background-color: #363535;
+    height: 35px;
+  //  color: white;
+    padding: 0px;
+    width: 65px;
+    //font-weight: 700;
+    margin-left: 3px;
+    border: none;
+    border-radius: 8px;
+  }
+  // .true{
+  //   display: none;
+  // }
+  // .false{
+  //   display: none;
+  // }
+  .logOut{
+    border: none;
+    font-weight: 700;
+    background:none;
+  }
+  .icon-img
+  {
+    height: 20px;
+  }
+  .name{
+    color: black;
+    font-weight: 700;
+    //margin-bottom: 18px;
+  }
+  .dropDown {
+    color: black;
+    font-weight: 700;
+  }

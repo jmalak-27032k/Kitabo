@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+
+        <div class="card">
+            <div class="container">
+            <form form [formGroup]="formGroup">
+                <b>House/Flat Number</b><br>
+                <input type="text" formControlName="HouseNo" placeholder="House Number" class="form-control" />
+                <br>
+                <b>Sub Locality</b><br>
+                <input type="text" formControlName="SubLocality" placeholder="Sub Locality" class="form-control" />
+                <br>
+                <b>City</b><br>
+                <input type="text" formControlName="City" placeholder="City" class="form-control" />
+                <br>
+                <b>State</b><br>
+                <input type="text" formControlName="State" placeholder="State" class="form-control" />
+                <br>
+                <b>Pincode</b><br>
+                <input type="text" formControlName="Pincode" placeholder="Pincode" class="form-control" />
+                <br>
+                <b>Latitude</b><br>
+                <input type="text" formControlName="Latitude" placeholder="Latitude" class="form-control" />
+                <br>
+                <b>Longitude</b><br>
+                <input type="text" formControlName="Longitude" placeholder="Longitude" class="form-control" />
+                <br>
+
+                <b>Landmark(optional)</b><br>
+                <input type="text" formControlName="Landmark" placeholder="Landmark(optional)" class="form-control" />
+                <br>
+                <b>Tag Location</b><br>
+                <button class="btn" (click)="home()">Home</button>
+                <button class="btn" (click)="work()">Work</button>
+                <button class="btn" (click)="other()">Other</button>
+
+                <br>
+                <br>
+                <button class="btn1" (click)="saveAddress(formGroup.value)">Save Adress and Proceed</button>
+            </form>
+        </div>
+        </div>
+
+    </div>
+    <div class="col-md-3"></div>
+</div>

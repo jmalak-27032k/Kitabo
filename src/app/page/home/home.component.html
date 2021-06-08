@@ -1,0 +1,79 @@
+<div class="row">
+  <div class="card card1 ml-3 mr-3">
+
+    <div class="card-body">
+      <ngb-carousel>
+        <ng-template ngbSlide *ngFor="let image of imageUrl">
+          <img style="height: 350px;" class="imgbox1" src="{{image}}" alt="Random first slide">
+          <div class="carousel-caption">
+          </div>
+        </ng-template>
+
+      </ngb-carousel>
+    </div>
+
+  </div>
+</div>
+<br>
+<div class="row" style="padding-left: 27px;">
+  <h2>Discover</h2>
+</div>
+<ng-template #elseBlock>
+<div class="row">
+  <div class="buttonTab1" *ngFor="let genre of subSubGenre, let i=index">
+    <button id="buttonTab" (click)="getBooks(genre)" class="buttonTab">
+      {{genre}}
+    </button>
+  </div>
+  <div id="showMore" class="row showMore" *ngFor="let genre of subSubGenre; let i = index">
+    <div class="col-md-6"></div>
+    <div class="col-md-6">
+      <button (click)="showMore(genre)" class="btn1"><i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i></button>
+    </div>
+  </div>
+</div>
+</ng-template>
+
+<div class="row" *ngIf="loginStatus==true; else elseBlock">
+  <div class="buttonTab1" *ngFor="let genre of subSelectedGenre, let i=index">
+    <button id="buttonTab" (click)="getBooks(genre)" class="buttonTab">
+      {{genre}}
+    </button>
+  </div>
+  <div id="showMore" class="row showMore" *ngFor="let genre of subSubGenre; let i = index">
+    <div class="col-md-6"></div>
+    <div class="col-md-6">
+      <button (click)="showMore(genre)" class="btn1"><i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i></button>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="row" style="margin-right: -32px;margin-left: -32px;">
+
+  <div id="card2" class="col-md-2" *ngFor="let item of LimitedNewBook">
+    <div>
+      <button (click)="detailPage(item.ISBN,item.Genre)" class="imgbox bottom">
+        <img src="{{item.CoverImg}}" class="imgbox bottom">
+      </button><br><br>
+      <p style="font-weight: 500;">{{item.Title}}<br>
+        <b>₹ {{item.SellingPrice}}.00</b>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="row" id="defaultBooks" style="margin-right: -32px;margin-left: -32px;">
+  <div class="col-md-2" *ngFor="let item of LimitedNewBook1">
+    <div>
+
+      <button (click)="detailPage(item.ISBN,item.Genre)" class="imgbox bottom">
+        <img src="{{item.CoverImg}}" class="imgbox bottom">
+      </button><br><br>
+      <p style="font-weight: 500;">{{item.Title}} <br>
+        <b>₹ {{item.SellingPrice}}.00</b>
+      </p>
+    </div>
+  </div>
+</div>

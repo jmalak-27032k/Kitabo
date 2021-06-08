@@ -1,0 +1,125 @@
+::ng-deep h6,h5, h4, h3,h2,h1,label,.nav, input,button,p,label,span,table,tr,th,td{
+    font-family: "Rubik", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+.Active
+{
+    background-color: #363535;
+    color: white;
+}
+.card{
+    box-shadow: 0 20px 30px rgba(156, 156, 156, 0.19), 0 6px 6px rgba(148, 146, 146, 0.23);
+}
+.c1{
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+.btn{
+    background-color: #363535;
+    height: 50px;
+    width: 350px;
+    color: white;
+    font-weight: 700;
+    border-radius: 15px;
+}
+tr{
+    box-shadow: 0 3px 3px rgba(190, 186, 186, 0.19), 0 3px 5px rgba(187, 182, 182, 0.23);
+    height: 45px;
+    border-radius: 5px;
+}
+.btn{
+    background-color: #363535;
+    height: 55px;
+    color: white;
+    padding: 0px;
+    width: 250px;
+    font-weight: 700;
+    margin-left: 3px;
+    border-radius: 15px;
+
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.apply{
+    border-radius: 5px;
+    color: white;
+    background-color: #363535;
+    height: 35px;
+    width: 68px;
+}
+.addAddress{
+    height: 45px;
+    width: 133px;
+    border-radius: 7px;
+    background-color: #363535;
+    color: white;
+}
+.data{
+    font-weight: 700;
+}
+.divBorders{
+    border: solid;
+    border-width: 1px;
+    border-color: #EAF4FC;
+    border-radius: 9px;
+    padding: 14px;
+}
+.divBorders:hover{
+    border: solid;
+    border-width: 1px;
+    background-color:#EAF4FC ;
+    border-color: #EAF4FC;
+    border-radius: 9px;
+    padding: 14px;
+}
+
+// input[type="checkbox"]#checkbox1:checked + span {
+//     border-color: #363535;
+//   background-color:#363535;
+// }
+#verifyButton{
+    display: none;
+}
+
+input:checked {
+    height: 18px;
+    width: 18px;
+    border-radius: 3px;
+  
+}
+input{
+    height: 18px;
+    width: 18px;
+    border-radius: 3px;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.imgbox
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    width: 300px;
+}
+.modal-body{
+    padding: 0;
+   // background-color: #363535;
+}
+.modal-content{
+    padding: 0;
+    background-color: #131314;
+}
+
+::ng-deep .modal-content {
+    padding: 0;
+    //background-color: #2e2e38;
+  }
+  .verifyAndPay{
+    height: 45px;
+    border-radius: 8px;width: 170px; background-color: #30303C;color: white;
+  }
